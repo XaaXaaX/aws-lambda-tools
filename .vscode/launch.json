@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "name": "Python : actual file",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "args": [ "--environment", "dev" ]
+    },
+    {
+      "name": "Debug Jest Tests",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": [
+        "--inspect-brk",
+        "node_modules/jest/bin/jest.js",
+        "--runInBand",
+        // "-t",
+        // "MyTest",
+        "-c",
+        "jest.config.js"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229
+    }
+  ]
+}

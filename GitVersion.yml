@@ -1,0 +1,9 @@
+assembly-versioning-scheme: MajorMinorPatchTag
+mode: ContinuousDeployment
+branches:
+  main:
+    label: 'ci'
+    increment: Minor
+    regex: main
+ignore:
+  sha: []
